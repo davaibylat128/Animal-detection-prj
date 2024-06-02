@@ -70,7 +70,7 @@ def display(filename):
 
     environ = request.environ
     if file_extension == 'jpg':      
-        return send_from_directory(directory,latest_file,environ)
+        return send_from_directory(directory,latest_file)
     else:
         return "Invalid file format"
 
