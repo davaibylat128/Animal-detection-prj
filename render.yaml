@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: Anima-detection
+    name: Animal-detection-prj
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app.main:app"
+    startCommand: "gunicorn -b 0.0.0.0:$PORT app:app"
     plan: free
